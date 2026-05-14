@@ -1,0 +1,317 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#ff2e2e;
+  color:white;
+}
+
+
+/* ========================================
+   TOPO
+======================================== */
+
+.topo{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:#ff2e2e;
+
+  padding:18px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-bottom:2px solid rgba(255,255,255,0.15);
+
+  transition:0.3s;
+}
+
+.topo img{
+  height:170px;
+  width:auto;
+}
+
+.carrinho{
+  position:absolute;
+  right:20px;
+
+  background:white;
+  color:#ff2e2e;
+
+  padding:10px 18px;
+
+  border-radius:30px;
+
+  font-weight:bold;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+  transition:0.2s;
+}
+
+
+/* ========================================
+   CATEGORIAS
+======================================== */
+
+.categorias{
+  position:sticky;
+  top:205px;
+  z-index:999;
+
+  display:flex;
+  gap:12px;
+
+  overflow-x:auto;
+
+  padding:15px 20px;
+
+  background:#ff2e2e;
+
+  scrollbar-width:none;
+}
+
+.categorias::-webkit-scrollbar{
+  display:none;
+}
+
+.categorias button{
+  border:none;
+
+  background:white;
+  color:#ff2e2e;
+
+  padding:14px 24px;
+
+  border-radius:30px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.2s ease;
+
+  white-space:nowrap;
+
+  flex-shrink:0;
+
+  will-change:transform;
+}
+
+.categorias button:hover{
+  background:#1f1f1f;
+  color:white;
+
+  transform:scale(1.05);
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1{
+  text-align:center;
+
+  margin-top:40px;
+  margin-bottom:20px;
+
+  font-size:32px;
+
+  letter-spacing:1px;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+main{
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  margin-bottom:55px;
+
+  scroll-margin-top:300px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card{
+  width:90%;
+  max-width:900px;
+
+  background:white;
+  color:#222;
+
+  border-radius:18px;
+
+  padding:22px;
+
+  margin:12px 0;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+  transition:0.25s ease;
+
+  will-change:transform;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+
+  box-shadow:0 12px 25px rgba(0,0,0,0.18);
+}
+
+.card h2{
+  font-size:24px;
+
+  margin-bottom:10px;
+
+  color:#111;
+}
+
+.descricao{
+  color:#666;
+
+  line-height:1.5;
+
+  margin-bottom:16px;
+
+  font-size:15px;
+}
+
+.card p:last-of-type{
+  font-size:24px;
+
+  font-weight:bold;
+
+  color:#ff2e2e;
+
+  margin-bottom:18px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.card button{
+  border:none;
+
+  background:#ff2e2e;
+  color:white;
+
+  padding:14px 22px;
+
+  border-radius:12px;
+
+  font-size:16px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.2s ease;
+
+  will-change:transform;
+}
+
+.card button:hover{
+  background:#d61f1f;
+
+  transform:scale(1.03);
+}
+
+.card button:active{
+  transform:scale(0.98);
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media(max-width:768px){
+
+  .topo{
+    padding:14px;
+  }
+
+  .topo img{
+    height:110px;
+  }
+
+  .categorias{
+    top:145px;
+
+    padding:12px 15px;
+
+    gap:10px;
+  }
+
+  .categorias button{
+    padding:12px 18px;
+
+    font-size:14px;
+  }
+
+  h1{
+    font-size:26px;
+
+    margin-top:30px;
+  }
+
+  main{
+    scroll-margin-top:240px;
+  }
+
+  .card{
+    width:95%;
+
+    padding:18px;
+  }
+
+  .card h2{
+    font-size:20px;
+  }
+
+  .descricao{
+    font-size:14px;
+  }
+
+  .card p:last-of-type{
+    font-size:20px;
+  }
+
+  .card button{
+    width:100%;
+  }
+
+  .carrinho{
+    right:10px;
+
+    padding:8px 14px;
+
+    font-size:13px;
+  }
+
+}
