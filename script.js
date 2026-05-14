@@ -352,7 +352,7 @@ carrinho.addEventListener("click", () => {
         TROCA PELO NÚMERO DA LANCHERIA
     */
 
-    const telefone = "5551997967718"
+    const telefone = "5551998329095"
 
     const url = `https://wa.me/${telefone}?text=${mensagem}`;
 
